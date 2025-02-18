@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let libraryManager = LibraryManager() // Instancia de la clase de librerías
+    private let libraryManager = LibraryManager()
+    @State private var lastLibraryCalled = ""
+
 
     var body: some View {
         VStack {
@@ -10,12 +12,15 @@ struct ContentView: View {
                 .padding()
 
             Button("Llamar a la Librería") {
-                libraryManager.callLibraryFunction()
+                lastLibraryCalled = libraryManager.callLibraryFunction()
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(10)
+            
+            Text("Última librería llamada: \(lastLibraryCalled)")
+                .padding()
         }
     }
 }

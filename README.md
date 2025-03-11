@@ -1,4 +1,4 @@
-# basic_ios_app# 📱 basic_app
+# basic_ios_app
 
 ## Descripción
 `basic_app` es una aplicación iOS desarrollada en **Swift** que integra múltiples librerías. Se gestiona a través de **CocoaPods** para la administración de dependencias.
